@@ -49,30 +49,9 @@
       
       
     </style>
-    <script>
-      document.addEventListener("DOMContentLoaded", function() {
-        let user=document.querySelector("#user");
-          let form = document.querySelector("form");
-          form.addEventListener("submit",function(event){
-            event.preventDefault();
-           
-        });
-        user.addEventListener("change",function(){
-            console.log("change event");
-            console.log("final value = ",this.value);
-        });
-
-        user.addEventListener("input",function(){
-          console.log("input event");
-          console.log("final value = ",this.value);
-      });
-
-      });
-  </script>
-  
+    <script src="/static/css/app.js"></script>
   </head>
   <body>
-    
     {% include "nav.html" %}
     <div class="container mt-3">
       <img class="img-fluid" id="banner" src="/static/banner2.avif" alt="Career Banner">
