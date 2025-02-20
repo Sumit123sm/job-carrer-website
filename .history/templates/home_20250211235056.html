@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>{{ company_name }} - Job Listings</title>
+</head>
+<body>
+    <h1>Job Listings at {{ company_name }}</h1>
+    <ul>
+        {% for job in jobs %}
+        <li>{{ job.title }} - {{ job.location }} - {{ job.salary }}</li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
