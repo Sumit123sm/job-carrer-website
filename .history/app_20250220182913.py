@@ -1,8 +1,6 @@
 from flask import Flask, render_template, jsonify
 import pymysql.cursors 
-from dotenv import load_dotenv,dotenv_values
-import os
-load_dotenv()
+from dotenv import load_dotenv
 
 app = Flask(__name__)
 
@@ -10,7 +8,7 @@ app = Flask(__name__)
 DB_CONFIG = {
     'host': 'localhost',  # Change this if your database is hosted elsewhere
     'user': 'root',  # Replace with your MySQL username
-    'password': os.getenv("API_KEY"),  # Replace with your MySQL password
+    'password': 'Sumi970',  # Replace with your MySQL password
     'database': 'job_portal',  # Replace with your database name
 }
 
