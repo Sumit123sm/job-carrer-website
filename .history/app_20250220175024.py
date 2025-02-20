@@ -8,7 +8,7 @@ DB_CONFIG = {
     'host': 'localhost',  # Change this if your database is hosted elsewhere
     'user': 'root',  # Replace with your MySQL username
     'password': '',  # Replace with your MySQL password
-    'database': '',  # Replace with your database name
+    'database': 'job_portal',  # Replace with your database name
 }
 
 def get_db_connection():

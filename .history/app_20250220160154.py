@@ -7,8 +7,8 @@ app = Flask(__name__)
 DB_CONFIG = {
     'host': 'localhost',  # Change this if your database is hosted elsewhere
     'user': 'root',  # Replace with your MySQL username
-    'password': '',  # Replace with your MySQL password
-    'database': '',  # Replace with your database name
+    'password': 'Sumi970',  # Replace with your MySQL password
+    'database': 'job_portal',  # Replace with your database name
 }
 
 def get_db_connection():
