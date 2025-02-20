@@ -42,7 +42,6 @@ def fetch_jobs():
             result = cursor.fetchone()
             if not result:
                 print("Table 'jobs' does not exist!")
-                return []
             cursor.execute("SELECT id, title, location, salary FROM jobs")  # Ensure the 'jobs' table exists
             jobs = cursor.fetchall()
         return jobs

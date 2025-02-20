@@ -38,7 +38,7 @@ def fetch_jobs():
 
     try:
         with connection.cursor() as cursor:
-            cursor.execute("SHOW TABLES LIKE 'jobs'")
+             cursor.execute("SHOW TABLES LIKE 'jobs'")
             result = cursor.fetchone()
             if not result:
                 print("Table 'jobs' does not exist!")

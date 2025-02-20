@@ -12,7 +12,11 @@ DB_CONFIG = {
     'user': 'root',  # Replace with your MySQL username
     'password': os.getenv("pass"),  # Replace with your MySQL password
     'database': os.getenv("db"),  # Replace with your database name
-    
+    # Ensure the environment variables are loaded correctly
+if not DB_CONFIG['password'] or not DB_CONFIG['database']:
+    raise ValueError("Missing database credentials. Check your .env file.")
+
+print("Database configuration loaded successfully.")
 }
 
 def get_db_connection():
@@ -38,11 +42,6 @@ def fetch_jobs():
 
     try:
         with connection.cursor() as cursor:
-            cursor.execute("SHOW TABLES LIKE 'jobs'")
-            result = cursor.fetchone()
-            if not result:
-                print("Table 'jobs' does not exist!")
-                return []
             cursor.execute("SELECT id, title, location, salary FROM jobs")  # Ensure the 'jobs' table exists
             jobs = cursor.fetchall()
         return jobs
